@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://wwww.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{libros/index}"
+>
+<div layout:fragment="SectionContent" class="container">
+  
+    <h2>Nuevo Libro</h2>
+    <form class="row ">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">ISBN</label>
+        <input type="text" class="form-control" id="idISBN" placeholder="XXX-NNN">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Titulo</label>
+        <input type="text" class="form-control" id="idTitulo" placeholder="nombre del libro">
+      </div>
+    </form>
+</div>

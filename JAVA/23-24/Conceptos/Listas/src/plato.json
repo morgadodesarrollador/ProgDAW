@@ -1,0 +1,6 @@
+{
+    "nombre" : "Hamburguesa",
+    "precio" : "1500" ,
+    "duracion" : "5",
+    "tamaño" : "entero"
+}

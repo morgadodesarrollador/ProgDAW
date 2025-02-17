@@ -1,0 +1,34 @@
+{
+  "platos":[
+    {
+    "cod": "p1",
+    "nombre" : "Hamburguesa",
+    "precio" : "12",
+    "duracion" : "5",
+    "tamaño" : "entero"
+    },
+    {
+      "cod": "p2",
+      "nombre" : "ArrozConCamarones",
+      "precio" : "23",
+      "duracion" : "5",
+      "tamaño" : "entero"
+    },
+
+    {
+      "cod": "p3",
+      "nombre" : "ArrozConPollo",
+      "precio" : "19",
+      "duracion" : "5",
+      "tamaño" : "entero"
+    },
+
+    {
+      "cod": "p4",
+      "nombre" : "FileteDePescado",
+      "precio" : "24",
+      "duracion" : "5",
+      "tamaño" : "medio"
+    }
+  ]
+}

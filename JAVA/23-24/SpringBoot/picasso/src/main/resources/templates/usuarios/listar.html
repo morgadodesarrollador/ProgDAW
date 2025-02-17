@@ -1,0 +1,63 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://wwww.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{usuarios/index}"
+>
+
+<div layout:fragment="SectionContent">
+    <section class="d-flex flex-wrap">
+      <h3 class="w-50">Listado de Usuarios</h3>
+      <form class="d-flex w-50">
+        <input class="form-control w-75" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success w-25" type="submit">Buscar</button>
+      </form>
+    <div class="w-100 d-flex  flex-row justify-content-end">
+      <a th:href="@{/usuarios/new}">
+        <button type="button" class="btn btn-primary m-2">
+          <i class="fs-4 bi bi-plus-lg"></i>
+        </button>
+      </a>
+    </div>
+    <table class="table w-100">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Acciones</th>
+      </thead>
+      <tbody>
+        <tr th:each="usuario : ${listaUsuarios}">
+          <td th:text="${usuario.id}">ID</td>
+          <td th:text="${usuario.nombre}">Pepe Pérez</td>
+          <td th:text="${usuario.email}">pepe.perez@openwebinars.net</td>
+          <td th:text="${usuario.telefono}">954000000</td>
+          <td>
+            <a class="text-decoration-none"  th:href="@{/usuarios/edit/{id}(id=${usuario.id})}">
+              <i class="fs-5 m-1 bi bi-pencil-square"></i>
+            </a>
+            <a class="text-decoration-none" th:href="@{/usuarios/delete/{id}(id=${usuario.id})}">
+              <i class="fs-5 m-1 bi bi-person-dash"></i>
+            </a>
+            <a class="text-decoration-none" >
+              <i class="fs-5 m-1 bi bi-search"></i>
+            </a>
+          <!--
+
+            <a class="btmodal text-decoration-none btn btn-primary" 
+               data-target="#modal-delete" th:attr="data-target='#modal-delete'+${usuario.id}"
+               data-bs-toggle="modal" data-bs-target="#exampleModal"
+               th:href="@{/usuarios/delete/{id}(id=${usuario.id})}">
+              <i class="fs-5 m-1 bi bi-person-dash"></i>
+            </a> --> 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <!--
+  <div class="w-25" th:insert="~{usuarios/componentes/deletemodal :: deletemodal}">
+    MOAL
+  </div> -->
+</div>
+

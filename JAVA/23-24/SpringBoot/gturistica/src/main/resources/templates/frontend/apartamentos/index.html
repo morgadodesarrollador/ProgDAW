@@ -1,0 +1,37 @@
+
+
+<!-- 
+    layout:decorate : esta plantilla hija hereda de una padre (base)
+    xmlns:layout: que la plantilla puede ser heredada 
+
+-->
+
+
+<html xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{frontend/layout/base}"
+      xmlns:layout="http://wwww.ultraq.net.nz/thymeleaf/layout"
+
+>
+
+<div layout:fragment="MainBase" class="container-fluid">
+    <section 
+        class="d-flex flex-row flex-wrap fl p-2 bd-highlight ">
+        <div class="p-2 w-75 border m-2"> 
+            Filtro de busqueda Zona
+        </div>
+        <div class="p-2 w-25 border"
+             style="min-height:500px"
+            >Filtro de busqueda Precios</div>
+        
+        <div layout:fragment="ListadoApt" class="p-2 w-75 border">
+            
+            Listado de Apartamentos
+        
+        </div>
+        
+        
+    </section>
+</div>
+<div layout:fragment="FooterEnlacesBase">
+    <span>Enlaces a Apartamentos</span>
+</div>

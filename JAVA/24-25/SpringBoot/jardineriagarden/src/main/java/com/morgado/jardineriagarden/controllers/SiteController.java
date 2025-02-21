@@ -20,5 +20,9 @@ public class SiteController {
         return "/www/site/servicios";
     }
     
+    @GetMapping("/contacto")
+    public String contacto() {
+        return "/www/site/contacto";
+    }
     
 }

@@ -6,5 +6,7 @@ import com.morgado.jardineria.model.Entity.Gamas;
 
 @Repository
 public interface GamasRepository extends JpaRepository<Gamas,String> {
+    // public void findClientesMayorLimite(){
     
+    // }
 }

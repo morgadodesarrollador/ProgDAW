@@ -1,0 +1,36 @@
+.menu-lateral {
+    width: 250px;
+    position: fixed;
+    height: 100vh;
+    background-color: #c55c5c;
+    padding-top: 20px;
+}
+.menu-lateral a {
+    color: white;
+    display: block;
+    padding: 15px;
+    font-size: 16px;
+}
+.menu-lateral a:hover {
+    background-color: #455a64;
+}
+.menu-lateral .logo {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 20px;
+    color: white;
+}
+
+
+/* Tabla Admin */
+.container {
+    margin-left: 270px;
+    padding: 20px;
+}
+.btn-floating {
+    margin-right: 5px;
+}
+.paginador {
+    margin-top: 20px;
+}

@@ -9,11 +9,13 @@ import com.morgado.jardineria.model.Repository.GamasRepository;
 
 @Service
 public class GamasService {
-    @Autowired
+    @Autowired //inyeccion del codigo del gamas Rep
     GamasRepository gamasRep;
 
     public List<Gamas> getAll() {
-        return this.gamasRep.findAll();
+        //finAll(ORM) = select * from Gamas
+        List<Gamas> gamas = this.gamasRep.findAll();//5
+        return gamas;
     }
 
     public void create(Gamas gama){
@@ -26,7 +28,11 @@ public class GamasService {
     }
 
     public Gamas getId(String id){
-        return this.gamasRep.findById(id).get();
+        //finByID(ORM) = select * from Gamas where gamaid=$id
+        //el orm transforma el registro devuelto por MYSQL en un objeto Java que
+        //se almacena en la variable gama
+        Gamas gama = this.gamasRep.findById(id).get();
+        return gama;
     }
 
     

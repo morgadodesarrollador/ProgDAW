@@ -58,8 +58,8 @@ public class Gamas {
     @Override
     public String toString() {
         return 
-                "[" + this.gamaid + "," 
+                "<" + this.gamaid + "," 
                 + this.descripcionTexto + "," 
-                + this.imagen + "]";
+                + this.imagen + ">";
     }
 }

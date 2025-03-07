@@ -21,10 +21,13 @@
     
                 <tbody>
                     <tr th:each="gama : ${Lgamas}">
-                        <td th:text="${gama.gamaid}"></td>
+                        <td>
+                            <a th:href="@{/gamas/{id}(id=${gama.gamaid})}">
+                                 <span th:text="${gama.gamaid}"></span>
+                            </a>
+                        </td>
                         <td th:text="${gama.descripcionTexto}"></td>
-                        <td th:text="${gama.imagen}"></td>
-                        
+                        <td>    </td>
                     </tr>
                 </tbody>
             </table>

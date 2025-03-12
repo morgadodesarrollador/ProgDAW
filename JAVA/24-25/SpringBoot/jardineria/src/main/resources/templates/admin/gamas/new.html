@@ -5,60 +5,63 @@
 <div layout:fragment="MainBase">
        <!-- Contenido principal -->
     <div class="container">
-        <h4>Nueva Categoria</h4>
-        <!-- Botón para abrir el modal -->
-      <!--  <a class="btn waves-effect waves-light green modal-trigger" href="#modalGama">
-            <i class="material-icons left">add</i>Nueva Gama
-        </a>
-    -->
+        <h4 class="center-align">Nueva Gama</h4>
         <!-- Modal de Formulario -->
         <div id="modalGama" class="modal1">
             <div class="modal-content">
-                <h5>Insertar Nueva Gama</h5>
-                <form>
+                <!-- th:object es la variable que referencia a este formulario-->
+                <!-- th:action es la URL (accion/controlador) al que se envian 
+                     las parejas (campo:valor) correspondientes a los inputs del Formulario
+                     cuando pulsemos el el botón guardar (submit)
+                     Al /admin/gamas/save del GamasController llegara un objeto con todos estos datos    
+                -->
+                <!-- th:field vamos a ASOCIAR cada input con una PROPIEDAD de la entidad Gama-->
+                <form
+                    method="post"
+                    th:object="${gamaForm}" 
+                    th:action="@{/admin/gamas/save}"
+                >
                     <!-- Campo Nombre -->
                     <div class="input-field">
-                        <input type="text" id="nombre" name="nombre" required>
+                        <input 
+                            type="text" id="nombre" name="nombre" required
+                            th:field="*{gamaid}"
+                            >
                         <label for="nombre">Nombre de la Gama</label>
                     </div>
 
                     <!-- Campo Descripción -->
                     <div class="input-field">
-                        <textarea id="descripcion" class="materialize-textarea" required></textarea>
+                        <textarea 
+                            id="descripcion" class="materialize-textarea" required
+                            th:field="*{descripcionTexto}"
+                        >
+                        </textarea>
                         <label for="descripcion">Descripción</label>
                     </div>
 
-                    <!-- Campo Imagen -->
-                    <div class="file-field input-field">
-                        <div class="btn blue">
-                            <span><i class="material-icons">image</i></span>
-                            <input type="file">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" placeholder="Sube una imagen">
-                        </div>
+                     <!-- Campo Imagen -->
+                     <div class="input-field">
+                        <textarea 
+                            type="text" id="imagen" name="imagen" required
+                            th:field="*{imagen}"
+                            >
+                        </textarea>
+                        <label for="imagen">Imagen de la Gama</label>
+                    </div>
+                    <!-- Botones -->
+                    <div class="modal-footer">
+                        <a href="#" class="modal-close btn grey">Cancelar</a>
+                        <button type="submit" class="btn green">Guardar</button>
                     </div>
                 </form>
             </div>
 
-            <!-- Botones -->
-            <div class="modal-footer">
-                <a href="#" class="modal-close btn grey">Cancelar</a>
-                <button type="submit" class="btn green">Guardar</button>
-            </div>
+            
         </div>
         </div>
 
-        <!-- Importar Materialize JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-        <script>
-        // Inicializar modales
-       /* document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.modal');
-            M.Modal.init(elems);
-        }); */
-        </script>
+     
     
     </div>
 </div>

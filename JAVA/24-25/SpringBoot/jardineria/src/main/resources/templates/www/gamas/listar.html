@@ -27,7 +27,9 @@
                             </a>
                         </td>
                         <td th:text="${gama.descripcionTexto}"></td>
-                        <td>    </td>
+                        <td> 
+                            <img height="100px" th:src="@{'/img/gamas/' + ${gama.imagen}}" th:alt="${gama.imagen}">
+                        </td>
                     </tr>
                 </tbody>
             </table>

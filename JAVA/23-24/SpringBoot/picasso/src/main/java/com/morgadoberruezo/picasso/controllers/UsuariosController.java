@@ -65,15 +65,7 @@ public class UsuariosController {
     //update
     @GetMapping("/usuarios/edit/{id}") //endpoint
     public String edit(@PathVariable long id, Model model) {
-        //Model es un área de memoria interna de comuniciación
-        //de variables entre el contralador/edit y la plantilla
-        ///usuarios/new
-        
-        //traer ese registro (objeto con ese id) de la BD
-        //select * from usuarios where id = ${id}
-     
-        // Usuario usuario = this.uService.findUserById(id);
-        Usuario usuario = this.uService.getMethod(id);
+        Usuario usuario = this.uService.getId(id);
         
         if (usuario != null){
             model.addAttribute("usuarioForm", usuario);
@@ -86,7 +78,7 @@ public class UsuariosController {
     @GetMapping("/usuarios/delete/{id}") 
     public String delete(@PathVariable long id) {
         System.out.println("Borrando al usuario " + id);
-        this.uService.deleteMethod(null);
+        this.uService.delete(id);
         return "redirect:/usuarios/listar"; //ejecuta la URL
     }
 }

@@ -2,7 +2,7 @@
 //componente funcional React = TS + Html
 const Qsomos =  () => {
     return (
-        <h1>Zona Quienes Somos</h1>
+        <h1>Zona Quienes Somos Nosotros</h1>
     )
 }
 

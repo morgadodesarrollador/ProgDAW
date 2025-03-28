@@ -16,9 +16,9 @@ function App() {
 
   return (
       //vista
-      <div className='container-full'>
+      <div className='container-full flex flex-col min-h-screen'>
         <Header />
-        <main className='container'>
+        <main className='container flex-1 mt-16'>
           <AppRoutes />
         </main>
         <Footer/>

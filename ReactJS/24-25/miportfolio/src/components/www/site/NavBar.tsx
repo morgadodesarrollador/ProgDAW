@@ -9,6 +9,7 @@ const opciones = [
   { name: 'Servicios', href: '/servicios', current: false },
   { name: 'Trabajos', href: '/trabajos', current: false },
   { name: 'Contacto', href: '/contacto', current: false },
+  
 ]
 const opcionesPerfil = [
   { nombre: 'Profile', url: '/perfil/mi' },

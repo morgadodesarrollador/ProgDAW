@@ -1,7 +1,5 @@
 
 import './App.css'
-import { useState } from 'react';
-import NavBar from './components/www/site/NavBar';
 import AppRoutes from './routes/AppRoutes';
 import { Header } from './components/www/site/Header';
 import { Footer } from './components/www/site/Footer';

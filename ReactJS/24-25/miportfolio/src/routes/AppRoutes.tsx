@@ -1,6 +1,8 @@
 import Home from "@/pages/www/site/Home";
 import Qsomos from "@/pages/www/site/Qsomos";
 import Servicios from "@/pages/www/site/Servicios";
+import { Productos } from "@/pages/www/productos/Productos";
+
 import { Route, Routes } from "react-router-dom"
 
 const AppRoutes = () => {
@@ -9,6 +11,8 @@ const AppRoutes = () => {
        <Route path="/" element={<Home />} />
        <Route path="/qsomos" element={<Qsomos />} />
        <Route path="/servicios" element={<Servicios />} />
+       <Route path="/productos" element={<Productos />} />
+      
     </Routes>
   )
 }
